@@ -26,10 +26,10 @@
                     <label for="" class="font-semibold">Senha</label> <br>
                     <input class="bg-cinza rounded text-white font-semibold p-2" type="password" placeholder="********" required>
 
-                    <button type="submit" class="flex justify-center items-center py-2 bg-amarelo px-11 mt-4 rounded-full font-semibold">Acessar</button>
+                    <button type="submit" class="flex justify-center items-center py-2 mx-auto bg-amarelo px-11 mt-4 rounded-full font-semibold">Acessar</button>
                 </form>
             </div>
-
+                <a href="{{route('register')}}" class="text-cinza pt-4">Ainda não possui conta? Cadastre-se</a>
         </div>
 
     </section>

@@ -17,7 +17,9 @@
             <img src="/assests/image/leitorImg.png" alt="" width="250" height="250">
 
             <div>
-                <form action="">
+                <form  method="post" action="{{route('user.register_action')}}">
+                    @csrf
+
                     <label for="" class="font-semibold">Nome</label> <br>
                     <input class="bg-cinza rounded text-white font-semibold p-2" type="name" placeholder="Digite seu nome..." required>
 
@@ -31,10 +33,12 @@
                     <label for="" class="font-semibold">Senha</label> <br>
                     <input class="bg-cinza rounded text-white font-semibold p-2" type="password" placeholder="********" required>
 
-                    <button type="submit" class="flex justify-center items-center py-2  bg-amarelo px-11 mt-4 rounded-full font-semibold">Acessar</button>
+                    <button type="submit" class="flex justify-center items-center py-2 mx-auto bg-amarelo px-11 mt-4 rounded-full font-semibold">Acessar</button>
+
+
                 </form>
             </div>
-
+                    <a href="{{route('login')}}" class="text-cinza pt-4">Já possui conta? Faça login</a>
         </div>
 
     </section>
