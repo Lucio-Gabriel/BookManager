@@ -13,7 +13,23 @@ class AuthController extends Controller
     //
     public function login()
     {
+        if(Auth::check()){
+            return redirect()->route('home');
+        }
+
         return view('login');
+    }
+
+    public function login_action(Request $request)
+    {
+        $validator = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
+        if( Auth::attempt($validator)){
+            return redirect()->route('home');
+        }
     }
 
     public function register(Request $request)
@@ -28,10 +44,16 @@ class AuthController extends Controller
     }
 
     public function register_action(Request $request){
+
+        // $data = $request->only('name', 'email', 'password');
+        // $userCreated = User::create($data);
+
+        // dd($userCreated);
+
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:5|confirmed'
+            'password' => 'required'
         ]);
 
 
@@ -42,6 +64,8 @@ class AuthController extends Controller
         $userCreate = User::create($data);
 
         return redirect(route('login'));
+
+
     }
 
 

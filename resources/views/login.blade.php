@@ -17,14 +17,16 @@
             <img src="/assests/image/leitorImg.png" alt="" width="250" height="250">
 
             <div>
-                <form action="">
+                <form action="{{route('user.login_action')}}" method="POST">
+                    @csrf
+
                     <label for="" class="font-semibold">Email</label> <br>
-                    <input class="bg-cinza rounded text-white font-semibold p-2" type="Email" placeholder="Digite seu email..." required>
+                    <input class="bg-cinza rounded text-white font-semibold p-2" type="email" name="email" placeholder="Digite seu email..." required>
 
                     <br><br>
 
                     <label for="" class="font-semibold">Senha</label> <br>
-                    <input class="bg-cinza rounded text-white font-semibold p-2" type="password" placeholder="********" required>
+                    <input class="bg-cinza rounded text-white font-semibold p-2" type="password" name="password" placeholder="********" required>
 
                     <button type="submit" class="flex justify-center items-center py-2 mx-auto bg-amarelo px-11 mt-4 rounded-full font-semibold">Acessar</button>
                 </form>

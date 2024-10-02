@@ -20,18 +20,18 @@
                 <form  method="post" action="{{route('user.register_action')}}">
                     @csrf
 
-                    <label for="" class="font-semibold">Nome</label> <br>
-                    <input class="bg-cinza rounded text-white font-semibold p-2" type="name" placeholder="Digite seu nome..." required>
+                    <label class="font-semibold">Nome</label> <br>
+                    <input class="bg-cinza rounded text-white font-semibold p-2" type="name" name="name" placeholder="Digite seu nome..." required>
 
                     <br><br>
 
-                    <label for="" class="font-semibold">Email</label> <br>
-                    <input class="bg-cinza rounded text-white font-semibold p-2" type="Email" placeholder="Digite seu email..." required>
+                    <label   class="font-semibold">Email</label> <br>
+                    <input class="bg-cinza rounded text-white font-semibold p-2" type="email" name="email" placeholder="Digite seu email..." required>
 
                     <br><br>
 
-                    <label for="" class="font-semibold">Senha</label> <br>
-                    <input class="bg-cinza rounded text-white font-semibold p-2" type="password" placeholder="********" required>
+                    <label class="font-semibold">Senha</label> <br>
+                    <input class="bg-cinza rounded text-white font-semibold p-2" type="password" name="password" placeholder="********" required>
 
                     <button type="submit" class="flex justify-center items-center py-2 mx-auto bg-amarelo px-11 mt-4 rounded-full font-semibold">Acessar</button>
 
