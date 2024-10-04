@@ -8,6 +8,7 @@ module.exports = {
         colors:{
             'amarelo':'#EA9901',
             'cinza': '#3B3B3B',
+            'cinza-claro': '#E9E9E9',
         }
     },
   },
