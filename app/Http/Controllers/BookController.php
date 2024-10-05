@@ -29,4 +29,18 @@ class BookController extends Controller
 
 
     }
+
+    public function delete(Request $request)
+    {
+        $id = $request->id;
+
+        $book = Book::find($id);
+
+        if($book){
+            $book->delete();
+        }
+
+        return redirect(route('home'));
+
+    }
 }

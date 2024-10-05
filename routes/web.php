@@ -14,6 +14,10 @@ Route::get('/inicio', [HomeController::class, 'index'])->name('home');
 Route::get('/adicionar-livro', [BookController::class, 'create'])->name('book.create');
 Route::post('/adicionar-livro/create_action', [BookController::class, 'create_action'])->name('book.create_action');
 
+Route::get('/adicionar-livro/delete', [BookController::class, 'delete'])->name('book.delete');
+
+
+
 Route::get('/sala-de-leitura', [RoomController::class, 'index'])->name('book.room');
 
 
