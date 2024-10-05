@@ -15,9 +15,7 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-
             $table->text('description');
-            
             $table->foreignIdFor(User::class)->references('id')->on('users')->onDelete('CASCADE');
             $table->timestamps();
         });

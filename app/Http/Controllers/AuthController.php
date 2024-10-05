@@ -11,7 +11,7 @@ use PhpParser\Node\Stmt\Return_;
 class AuthController extends Controller
 {
     //
-    public function login()
+    public function login(Request $request)
     {
         if(Auth::check()){
             return redirect()->route('home');
@@ -63,7 +63,7 @@ class AuthController extends Controller
 
         $userCreate = User::create($data);
 
-        return redirect(route('login'));
+        return redirect(route('home'));
 
 
     }
@@ -71,4 +71,3 @@ class AuthController extends Controller
 
 
 }
-
