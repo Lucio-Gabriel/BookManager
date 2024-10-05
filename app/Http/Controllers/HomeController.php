@@ -10,7 +10,9 @@ class HomeController extends Controller
     //
     public function index(Request $request)
     {
-        $books = Book::all()->take(3);
+
+        // caso  eu queira filtrar só por 3 livros usar = ->take(3)
+        $books = Book::all();
 
         return view('home', ['books' => $books]);
     }

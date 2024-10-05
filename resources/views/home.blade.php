@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -32,27 +32,12 @@
 
 
         <div class="flex items-center justify-center gap-8">
-
-
                 @foreach ($books as $book)
                     <x-card :data=$book/>
 
                 @endforeach
-
-
-
-
-
-
-
         </div>
-
-
-
-
     </div>
-
-
 </body>
 
 </html>
