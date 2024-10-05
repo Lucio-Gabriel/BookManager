@@ -29,29 +29,27 @@
     </div>
 
     <div class="container mx-auto">
-        <div class="bg-white w-1/3 h-96 rounded-2xl shadow-xl flex pt-16 gap-10 px-10">
 
-            <img class="rounded-2xl w-[200px] h-[250px]" src="/assests/image/essencialismo.png" alt="" >
 
-            <div class="text-start">
-                <h2 class="font-semibold text-3xl">Essencialismo</h2>
-                <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptates voluptate facere hic architecto, aspernatur sint modi odio dicta porro, perferendis magnam pariatur, harum assumenda doloribus distinctio quo perspiciatis fugiat! </p>
+        <div class="flex items-center justify-center gap-8">
 
-                <div class="w-full flex flex-col items-center">
-                 <a class="flex justify-center items-center py-2 bg-black text-white px-6 mt-4  rounded-full font-semibold" href="#"> Iniciar modo leitor </a>
 
-                 <div class="flex items-center gap-4">
-                    <a class="flex justify-center items-center py-2 bg-amarelo text-white px-6 mt-4  rounded-full font-semibold" href="#"> Editar </a>
-                    <a class="flex justify-center items-center py-2 bg-amarelo text-white px-6 mt-4  rounded-full font-semibold" href="#"> Deletar </a>
-                 </div>
+                @foreach ($books as $book)
+                    <x-card :data=$book/>
 
-                </div>
+                @endforeach
 
-            </div>
+
+
+
 
 
 
         </div>
+
+
+
+
     </div>
 
 

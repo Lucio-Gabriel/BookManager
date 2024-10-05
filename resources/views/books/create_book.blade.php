@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
     <title>Adicionar Livro - BookManager</title>
 </head>
-<body>
+<body class="bg-cinza-claro">
 
     <div class="bg-amarelo py-4 px-20 flex justify-between items-center">
         <img class="" src="/assests/image/book.png" alt="" width="150" height="150">
