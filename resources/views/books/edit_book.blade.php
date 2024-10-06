@@ -25,7 +25,7 @@
 
 
         <h1 class="text-4xl pt-10 pb-8 font-bold">Edite seu <span class="text-amarelo">Livro </span> aqui</h1>
-        <img class="pb-8" src="/assests/image/bookLivro.png" alt="" width="250" height="250">
+        <img class="pb-8" src="/assests/image/editBook.png" alt="" width="200" height="200">
 
 
             <form class="flex flex-col gap-5"  method="POST" action="{{route('book.edit_action')}}">

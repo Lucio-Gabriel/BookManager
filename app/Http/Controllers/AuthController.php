@@ -13,6 +13,7 @@ class AuthController extends Controller
     //
     public function login(Request $request)
     {
+
         if(Auth::check()){
             return redirect()->route('home');
         }
@@ -22,14 +23,15 @@ class AuthController extends Controller
 
     public function login_action(Request $request)
     {
+
         $validator = $request->validate([
             'email' => 'required|email',
             'password' => 'required'
         ]);
 
-        if( Auth::attempt($validator)){
+        if(  Auth::attempt($validator)){
             return redirect()->route('home');
-        }
+        };
     }
 
     public function register(Request $request)
@@ -63,11 +65,16 @@ class AuthController extends Controller
 
         $userCreate = User::create($data);
 
-        return redirect(route('home'));
-
+        return redirect(route('login'));
 
     }
 
+    public function logout(){
+
+        Auth::logout();
+
+        return redirect()->route('login');
+    }
 
 
 }

@@ -11,7 +11,7 @@
 
                  <div class="flex items-center gap-4">
                     <a class="flex justify-center items-center py-2 bg-amarelo text-white px-6 mt-4  rounded-full font-semibold" href="{{route('book.edit', ['id' => $data['id']])}}"> Editar </a>
-                    <a class="flex justify-center items-center py-2 bg-amarelo text-white px-6 mt-4  rounded-full font-semibold" href="{{route('book.delete', ['id' => $data['id']])}}"> Deletar </a>
+                    <a class="flex justify-center items-center py-2 bg-amarelo text-white px-6 mt-4  rounded-full font-semibold" href="{{route('book.delete', ['id' => $data['id']])}}" onclick="return confirm('Tem certeza que deseja deletar este livro?');"> Deletar </a>
 
 
                  </div>
