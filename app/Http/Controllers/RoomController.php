@@ -10,9 +10,6 @@ class RoomController extends Controller
     //
     public function index(Request $request)
     {
-
-        
-
         return view('room.room');
     }
 }

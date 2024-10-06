@@ -10,7 +10,7 @@
                  <a class="flex justify-center items-center py-2 bg-black text-white px-6 mt-4  rounded-full font-semibold" href="{{route('book.room')}}"> Iniciar modo leitor </a>
 
                  <div class="flex items-center gap-4">
-                    <a class="flex justify-center items-center py-2 bg-amarelo text-white px-6 mt-4  rounded-full font-semibold" href="{{route('book.delete', ['id' => $data['id']])}}"> Editar </a>
+                    <a class="flex justify-center items-center py-2 bg-amarelo text-white px-6 mt-4  rounded-full font-semibold" href="{{route('book.edit', ['id' => $data['id']])}}"> Editar </a>
                     <a class="flex justify-center items-center py-2 bg-amarelo text-white px-6 mt-4  rounded-full font-semibold" href="{{route('book.delete', ['id' => $data['id']])}}"> Deletar </a>
 
 

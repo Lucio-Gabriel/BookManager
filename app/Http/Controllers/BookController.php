@@ -26,9 +26,42 @@ class BookController extends Controller
 
         // dd($userCreated);
         return redirect(route('home'));
-
-
     }
+
+    public function edit(Request $request)
+    {
+        $id = $request->id;
+        // dd($id);
+
+        $book = Book::find($id);
+        if (!$book){
+            return redirect(route('home'));
+        }
+
+        $data['book'] = $book;
+
+        return view('books.edit_book', $data);
+    }
+
+    public function edit_action(Request $request)
+    {
+
+
+        $request_data = $request->only(['title', 'description']);
+
+        $book = Book::find($request->id);
+
+        if(!$book){
+            return 'Erro de livro não existente';
+        }
+
+
+        $book->update($request_data);
+        $book->save();
+        return redirect(route('home'));
+        
+    }
+
 
     public function delete(Request $request)
     {
