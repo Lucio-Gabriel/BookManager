@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function(){
 
-    Route::get('/', [StartController::class, 'index'])->name('start.page');
+
 
     Route::get('/inicio', [HomeController::class, 'index'])->name('home');
 
@@ -29,6 +29,7 @@ Route::middleware(['auth'])->group(function(){
 
 });
 
+Route::get('/', [StartController::class, 'index'])->name('start.page');
 
 Route::get('/conecte-se', [AuthController::class, 'login'])->name('login');
 Route::post('/conecte-se', [AuthController::class, 'login_action'])->name('user.login_action');

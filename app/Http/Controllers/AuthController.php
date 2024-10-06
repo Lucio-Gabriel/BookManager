@@ -47,10 +47,6 @@ class AuthController extends Controller
 
     public function register_action(Request $request){
 
-        // $data = $request->only('name', 'email', 'password');
-        // $userCreated = User::create($data);
-
-        // dd($userCreated);
 
         $request->validate([
             'name' => 'required',
